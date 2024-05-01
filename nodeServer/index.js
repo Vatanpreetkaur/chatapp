@@ -10,6 +10,7 @@ const users = {};
 io.on('connection', socket => {
     //getting message from server
     //on join new user
+    console.log("New connection");
     socket.on('new-user-joined', Name => {
         console.log("new user", Name)
         users[socket.id] = Name;
